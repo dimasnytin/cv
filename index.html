@@ -1084,12 +1084,12 @@
 
           <h3 class="h3 form-title">Напишите мне</h3>
           <!-- форма отправки сообщения -->
-          <form action="#" class="form" data-form onsubmit="sendEmail(); reset(); return false;">
+          <form action="https://formspree.io/f/dimasnytin@gmail.com" method="POST" class="form" data-form">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Ваше имя" required data-form-input>
 
-              <input type="email" name="email" id="email" class="form-input" placeholder="Ваш email" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Ваш email" required data-form-input>
             </div>
 
             <textarea name="message" class="form-input" placeholder="Напишите что-нибудь" required data-form-input></textarea>
@@ -1112,26 +1112,7 @@
 
 
 
-  <!-- CDN JS EMAIL POST -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        
-        SecureToken : "302917d9 - d508 - 4b7f- a52b - e90e3f30a790",
-        Host: "smtp.gmail.com",
-        Username: "dimasnytin@gmail.com",
-        Password: "edfcedfc2021",
-        To: 'dimasnytin@gmail.com',
-        From: document.getElementById("email").value,
-        Subject: "Новая заявка с сайта",
-        Body: "Ответь скорее"
-      }).then(
-        message => alert(message)
-      );
-    }
-  </script>
-
+  
   <!-- кустомный js -->
   <script src="./assets/js/script.js"></script>
 
